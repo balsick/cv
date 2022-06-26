@@ -75,7 +75,7 @@ const experiences = ref([{
   <div class="container h-100 px-0 print-font">
     <div class="row gx-2 h-100 w-100">
 
-      <div id="left" class="col-sm-4 col row bg-primary gy-1 mx-8 mt-0 px-4 pt-2 pt-sm-4 fs-7 text-white align-content-start">
+      <div id="left" class="col-auto col-sm-4 row bg-primary gy-1 mx-8 mt-0 px-4 pt-2 pt-sm-4 fs-7 text-white align-content-start">
         <div class="col d-block d-sm-none">
           <h1 class="text-start"><HW>Enrico</HW> Balsamo</h1>
           <h6 class="text-start">Software is my thing</h6>
