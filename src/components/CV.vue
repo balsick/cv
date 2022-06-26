@@ -75,13 +75,17 @@ const experiences = ref([{
   <div class="container h-100 px-0 print-font">
     <div class="row gx-2 h-100 w-100">
 
-      <div id="left" class="col-4 row bg-primary gy-1 mx-8 mt-0 px-4 pt-4 fs-7 text-white align-content-start">
+      <div id="left" class="col-sm-4 col row bg-primary gy-1 mx-8 mt-0 px-4 pt-2 pt-sm-4 fs-7 text-white align-content-start">
+        <div class="col d-block d-sm-none">
+          <h1 class="text-start"><HW>Enrico</HW> Balsamo</h1>
+          <h6 class="text-start">Software is my thing</h6>
+        </div>
         <div class="w-100 mx-auto row justify-content-center"><img alt="Vue logo" src="../assets/me.png" class="w-75 rounded" /></div>
         <divider />
         <CVS icon="fa-solid fa-person-rays" title="Personal Information" :data="personalInfo" />
         <CVS icon="fa-solid fa-microchip" title="Main technologies">
           <div class="row justify-content-around gy-2 mx-0 mt-0 px-0">
-            <img v-for="(s, i) in skills" :src="getImgUrl(s)" class="logo-tech col-auto" :key="s + i" />
+            <img v-for="(s, i) in skills" :src="getImgUrl(s)" class="logo-tech col-3 col-sm-auto" :key="s + i" />
           </div>
         </CVS>
         <CVS icon="fa-solid fa-building-columns" title="University">
@@ -95,11 +99,11 @@ const experiences = ref([{
       </div>
 
       <div id="right" class="col row gx-8 bg-white mx-0 mt-0 px-4 pt-4 align-content-start">
-        <div class="col">
+        <div class="col d-none d-sm-block">
           <h1 class="text-start"><HW>Enrico</HW> Balsamo</h1>
           <h6 class="text-start">Software is my thing</h6>
         </div>
-        <Divider />
+        <Divider class="d-none d-sm-inline"/>
         <p class="text-justify text-monospace">Long time passionate to logic and models abstraction, to the extraction of Mathematics
 from the real world to solve the most trivial daily problems, I've found in Computer
 Science the realization of my expressiveness and insight. Passion for tech projected me

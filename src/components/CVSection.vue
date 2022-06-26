@@ -3,6 +3,7 @@
   <slot v-if="!data"></slot>
   <CVLS :data="data" v-else />
   <hr class="w-100 mt-2" v-if="!noDivider"/>
+  <div class="pt-2" v-else ></div>
 </template>
 <script setup>
 import ST from './SectionTitle'
