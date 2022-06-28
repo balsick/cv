@@ -2,7 +2,7 @@
 import HW from './HighlightWord'
 import CVS from './CVSection'
 import Divider from './CVDivider'
-import { onMounted, ref } from 'vue'
+import { onMounted, ref, watch } from 'vue'
 import pdf from '../assets/cv.pdf'
 import { useRoute, useRouter } from 'vue-router'
 
@@ -10,13 +10,40 @@ const route = useRoute()
 const router = useRouter()
 const downloadRef = ref()
 
+const refreshing = ref(false)
+const registration = ref(null)
+const updateExists = ref(false)
+
+function updateAvailable (event) {
+  registration.value = event.detail
+  updateExists.value = true
+}
+function refreshApp () {
+  updateExists.value = false
+  // Make sure we only send a 'skip waiting' message if the SW is waiting
+  if (!registration.value || !registration.value.waiting) return
+  // send message to SW to skip the waiting and activate the new SW
+  registration.value.waiting.postMessage({ type: 'SKIP_WAITING' })
+}
 onMounted(() => {
+  document.addEventListener('swUpdated', updateAvailable, { once: true })
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    if (refreshing.value) return
+    refreshing.value = true
+    // Here the actual reload of the page occurs
+    window.location.reload()
+  })
+  console.log('ciao')
+
   if (route.path === '/pdf') {
     downloadRef.value.click()
     router.replace({ path: '/' })
   }
 })
 
+watch(updateExists, (newUpdateExists, oldUpdateExists) => {
+  if (newUpdateExists) refreshApp()
+})
 const skills = ref([
   'java',
   'react',
