@@ -12,7 +12,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* import specific icons */
-import { faLocationDot, faBirthdayCake, faBuildingColumns, faMobile, faAt, faDatabase, faMicrochip, faPersonRays, faLanguage, faThumbsUp, faBookOpen, faPersonSwimming, faFutbol, faArrowTrendUp, faTv } from '@fortawesome/free-solid-svg-icons'
+import { faLocationDot, faBirthdayCake, faBuildingColumns, faMobile, faAt, faDatabase, faMicrochip, faPersonRays, faLanguage, faThumbsUp, faBookOpen, faPersonSwimming, faFutbol, faArrowTrendUp, faTv, faDownload } from '@fortawesome/free-solid-svg-icons'
 
 import { faReact, faVuejs, faJava, faJs, faAws, faStackOverflow, faGithub } from '@fortawesome/free-brands-svg-icons'
 
@@ -32,6 +32,7 @@ library.add(faPersonSwimming)
 library.add(faFutbol)
 library.add(faArrowTrendUp)
 library.add(faTv)
+library.add(faDownload)
 
 library.add(faReact)
 library.add(faVuejs)

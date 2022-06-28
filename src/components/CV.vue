@@ -3,6 +3,7 @@ import HW from './HighlightWord'
 import CVS from './CVSection'
 import Divider from './CVDivider'
 import { ref } from 'vue'
+import pdf from '../assets/cv.pdf'
 const skills = ref([
   'java',
   'react',
@@ -73,14 +74,17 @@ const experiences = ref([{
 </script>
 <template>
   <div class="container h-100 px-0 print-font">
-    <div class="row gx-2 h-100 w-100">
+    <div class="row gx-sm-2 gx-0 h-100 w-100">
 
-      <div id="left" class="col-auto col-sm-4 row bg-primary gy-1 mx-8 mt-0 px-4 pt-2 pt-sm-4 fs-7 text-white align-content-start">
+      <div id="left" class="col-auto col-sm-4 row bg-primary gy-1 mx-sm-8 mx-0 mt-0 px-2 px-sm-4 pt-2 pt-sm-4 fs-7 text-white align-content-start">
         <div class="col d-block d-sm-none">
           <h1 class="text-start"><HW>Enrico</HW> Balsamo</h1>
           <h6 class="text-start">Software is my thing</h6>
         </div>
-        <div class="w-100 mx-auto row justify-content-center"><img alt="Vue logo" src="../assets/me.png" class="w-75 rounded" /></div>
+        <div class="no-print col-auto d-sm-none d-block pt-2">
+          <a :href="pdf" download class="rounded bg-white text-primary p-1 text-uppercase bold text-decoration-none"><font-awesome-icon icon="fa-solid fa-download" />&nbsp;Download</a>
+        </div>
+        <div class="w-100 mx-auto row justify-content-center"><img alt="Vue logo" src="../assets/me.png" class="rounded-img" /></div>
         <divider />
         <CVS icon="fa-solid fa-person-rays" title="Personal Information" :data="personalInfo" />
         <CVS icon="fa-solid fa-microchip" title="Main technologies">
@@ -102,6 +106,9 @@ const experiences = ref([{
         <div class="col d-none d-sm-block">
           <h1 class="text-start"><HW>Enrico</HW> Balsamo</h1>
           <h6 class="text-start">Software is my thing</h6>
+        </div>
+        <div class="no-print col-auto d-none d-sm-block pt-2">
+          <a :href="pdf" download class="rounded bg-white text-primary p-1 text-uppercase bold text-decoration-none"><font-awesome-icon icon="fa-solid fa-download" />&nbsp;Download</a>
         </div>
         <Divider class="d-none d-sm-inline"/>
         <p class="text-justify text-monospace">Long time passionate to logic and models abstraction, to the extraction of Mathematics
@@ -145,7 +152,7 @@ goals, leaving binaries and classic patterns to find the most effective solution
         <div class="pt-4"></div>
         <!-- <div class="pt-4"></div> -->
       </div>
-      <div class="row w-100 m-0 h-auto bg-primary text-white px-4 pb-2 pt-3 fs-8 align-items-end">
+      <div class="row w-100 m-0 h-auto bg-primary text-white px-4 pb-2 pt-2 fs-8 align-items-end">
           This CV was made using vue.js and bootstrap. Was it necessary? No, but more fun. Source code on github.<br/>
           In compliance with the Italian legislative Decree no. 196 dated 30/06/2003, I hereby authorize you to use and process my personal details contained in this document.
       </div>
