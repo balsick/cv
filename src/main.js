@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import './registerServiceWorker'
+import router from './router'
 // import 'bootstrap'
 // import 'bootstrap/dist/css/bootstrap.min.css'
 import '../scss/theme.scss'
@@ -42,6 +43,7 @@ library.add(faAws)
 library.add(faGithub)
 library.add(faStackOverflow)
 
-createApp(App)
-  .component('font-awesome-icon', FontAwesomeIcon)
-  .mount('#app')
+const app = createApp(App)
+app.component('font-awesome-icon', FontAwesomeIcon)
+app.use(router)
+app.mount('#app')

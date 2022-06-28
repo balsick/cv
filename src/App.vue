@@ -1,14 +1,10 @@
 <template>
-  <CV/>
+  <router-view ></router-view>
 </template>
 
 <script>
-import CV from './components/CV.vue'
 
 export default {
-  name: 'App',
-  components: {
-    CV
-  }
+  name: 'App'
 }
 </script>

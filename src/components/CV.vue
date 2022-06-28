@@ -2,8 +2,21 @@
 import HW from './HighlightWord'
 import CVS from './CVSection'
 import Divider from './CVDivider'
-import { ref } from 'vue'
+import { onMounted, ref } from 'vue'
 import pdf from '../assets/cv.pdf'
+import { useRoute, useRouter } from 'vue-router'
+
+const route = useRoute()
+const router = useRouter()
+const downloadRef = ref()
+
+onMounted(() => {
+  if (route.path === '/pdf') {
+    downloadRef.value.click()
+    router.replace({ path: '/' })
+  }
+})
+
 const skills = ref([
   'java',
   'react',
@@ -82,7 +95,7 @@ const experiences = ref([{
           <h6 class="text-start">Software is my thing</h6>
         </div>
         <div class="no-print col-auto d-sm-none d-block pt-2">
-          <a :href="pdf" download class="rounded bg-white text-primary p-1 text-uppercase bold text-decoration-none"><font-awesome-icon icon="fa-solid fa-download" />&nbsp;Download</a>
+          <a :href="pdf" ref="downloadRef" download class="rounded bg-white text-primary p-1 text-uppercase bold text-decoration-none"><font-awesome-icon icon="fa-solid fa-download" />&nbsp;Download</a>
         </div>
         <div class="w-100 mx-auto row justify-content-center"><img alt="Vue logo" src="../assets/me.png" class="rounded-img" /></div>
         <divider />
