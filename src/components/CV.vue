@@ -181,7 +181,6 @@ goals, leaving binaries and classic patterns to find the most effective solution
         </p>
         <Divider white />
         <div class="pt-4"></div>
-        <h5><HW primary uppercase bold>Professional experiences</HW></h5>
         <Divider />
         <p v-for="({ title, description, since }, i) in experiences" :key="title + i">
         <b>{{ title }}</b>
