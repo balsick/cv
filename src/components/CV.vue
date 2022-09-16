@@ -151,48 +151,55 @@ const experiences = ref([{
           <a :href="pdf" download class="rounded bg-white text-primary p-1 text-uppercase bold text-decoration-none"><font-awesome-icon icon="fa-solid fa-download" />&nbsp;Download</a>
         </div>
         <Divider class="d-none d-sm-inline"/>
-        <p class="text-justify text-monospace">Long time passionate to logic and models abstraction, to the extraction of Mathematics
-from the real world to solve the most trivial daily problems, I've found in Computer
-Science the realization of my expressiveness and insight. Passion for tech projected me
-to the most important choices for my studies and work career. Willful and pushing, I
-never give up to the resolution of any kind of problem or the full achievement of my
-goals, leaving binaries and classic patterns to find the most effective solutions.</p>
+        <p class="text-justify text-monospace">
+          Long time passionate to logic and models abstraction, to the extraction of Mathematics
+          from the real world to solve the most trivial daily problems, I have found in Computer
+          Science the realization of my expressiveness and insight. Passion for tech projected me
+          to the most important choices for my studies and work career. Willful and pushing, I
+          never give up to the resolution of any kind of problem or the full achievement of my
+          goals, leaving binaries and classic patterns to find the most effective solutions.</p>
         <Divider white />
-        <div class="pt-4"></div>
+        <!-- <div class="pt-1"></div> -->
         <h5><HW uppercase primary bold>technical Skills and knowledge</HW></h5>
         <Divider />
         <p class="text-justify text-monospace">
-        In my everyday job in the company I have almost exclusively worked in, I have spent most of the time developing
-        and growing a complex software platform spaning many services on several entities, first on each
-        customer's on premise installation, then on standard <HW>cloud</HW> implementations.<br/>
-        The job of each component might be completely different from one another, so choosing the best strategies and
-        technologies for developing, communicating and deploying was essential.<br/>
-        This way I have been able to learn very vary technologies, on each part of a running IT business, and under my guidance
-        old tech and approaches were replaced with new modern and fresh <HW>microservices-oriented</HW> ways of thinking.<br/>
-        <HW>Separation of concerns</HW> is my thing, and I'd rather add lines of code and complexity than hardcode,
-        having in mind that this way of coding eventually decreases the lines of code and the overall complexity.
-        I always look for configurability, because it allows <HW>reusability</HW> and eventual cost-saving,
-        but I am not a blind fan: sometimes, quick and simple is better.<br/>
-        Given the time I have worked in that company and its nature of being a startup, and the centrality of my position,
-        saying that I am a <HW>full-stack developer</HW> is indeed the truth. From acquiring the customer's needs, developing the backend business logic,
-        designing the database model and optimizing queries, to develop the core UI framework and implementations on both Java Swing fat-client and browser,
-        designing and developing custom mobile apps. But also deploying via custom services, docker instances, kubernetes.<br/>
-        <HW>Name some tech</HW>, I have probably made at least some experience with it.
+          In my everyday job in the company I have almost exclusively worked in, I have spent most of the time developing
+          and growing a complex software platform spaning many services on several entities, first on each
+          customer's on premise installation, then on standard <HW>cloud</HW> implementations.<br/>
+          The job of each component might be completely different from one another, so choosing the best strategies and
+          technologies for developing, communicating and deploying was essential.<br/>
+          This way I have been able to learn very vary technologies, on each part of a running IT business, and under my guidance
+          old tech and approaches were replaced with new modern and fresh <HW>microservices-oriented</HW> ways of thinking.<br/>
+          <HW>Separation of concerns</HW> is my thing, and I'd rather add lines of code and complexity than hardcode,
+          having in mind that this way of coding eventually decreases the lines of code and the overall complexity.
+          I always look for configurability, because it allows <HW>reusability</HW> and eventual cost-saving,
+          but I am not a blind fan: sometimes, quick and simple is better.<br/>
+          Given the time I have worked in that company, its nature of being a startup, and the centrality of my position,
+          saying that I am a <HW>full-stack developer</HW> is indeed the truth: acquiring the customer's needs,
+          developing the backend business logic, designing the database model and optimizing queries, developing core UI framework
+          and implementations on both Java Swing fat-client and browser, designing and developing custom mobile apps.
+          But also I could increase my dev-ops skills, deploying custom services, docker instances, kubernetes.<br/>
+          <br/>
+          What I expect to find in my next job is more challenges: with a baggage like this, I want to exploit my experience,
+          and satisfy my voracious <HW>curiosity</HW>.<br/>
+          With a job background like this, I expect to get farther and farther from an operational position and become
+          a pure designer and decision maker, being able to analyze the customer and the project's functional and business needs,
+          draw a route and guide the team toward the goal.
         </p>
         <Divider white />
-        <div class="pt-4"></div>
+        <!-- <div class="pt-1"></div> -->
         <Divider />
         <p v-for="({ title, description, since }, i) in experiences" :key="title + i">
         <b>{{ title }}</b>
         <template v-if="since"> (since {{ since }})</template>
         <template v-if="description">: {{ description }}</template>
         </p>
-        <div class="pt-2"></div>
-        <div class="pt-4"></div>
+        <div class="pt-1"></div>
+        <!-- <div class="pt-4"></div> -->
         <!-- <div class="pt-4"></div> -->
       </div>
       <div class="row w-100 m-0 h-auto bg-primary text-white px-4 pb-2 pt-2 fs-8 align-items-end">
-          This CV was made using vue.js and bootstrap. Was it necessary? No, but more fun. Source code on github.<br/>
+          This CV was made using vue.js and bootstrap. Was it necessary? No, but more fun. Read it at https://balsick.github.io/cv<br/>
           In compliance with the Italian legislative Decree no. 196 dated 30/06/2003, I hereby authorize you to use and process my personal details contained in this document.
       </div>
     </div>
