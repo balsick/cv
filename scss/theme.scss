@@ -56,6 +56,10 @@ $container-max: 960px;
   text-align: justify;
 }
 
+.print-only {
+  display: none;
+}
+
 @media print {
 
   #app {
@@ -86,6 +90,9 @@ $container-max: 960px;
   }
   .no-print {
     display: none!important;
+  }
+  .print-only {
+    display: block!important;
   }
 }
 // #app {
