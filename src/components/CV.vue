@@ -128,9 +128,9 @@ const experiences = ref([{
         <divider />
         <CVS icon="fa-solid fa-person-rays" title="Personal Information" :data="personalInfo" />
         <CVS icon="fa-solid fa-microchip" title="Main technologies">
-          <div class="row justify-content-around gy-2 mx-0 mt-0 px-0">
-            <img v-for="(s, i) in skills" :src="getImgUrl(s)" class="logo-tech col-3 col-sm-auto no-print" :key="s + i" />
-            <span v-for="(s, i) in skills" :key="s + i" class="col-3 col-sm-auto print-only">{{s}}</span>
+          <div class="row justify-content-around mx-0 gy-0 mt-0 px-0">
+            <img v-for="(s, i) in skills" :src="getImgUrl(s)" class="logo-tech col-3 my-2 col-sm-auto no-print" :key="s + i" />
+            <span v-for="(s, i) in skills" :key="s + i" class="col-3 col-sm-auto my-0 print-only">{{s}}</span>
           </div>
         </CVS>
         <CVS icon="fa-solid fa-building-columns" title="University">
