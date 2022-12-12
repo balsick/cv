@@ -47,13 +47,13 @@ watch(updateExists, (newUpdateExists, oldUpdateExists) => {
 const skills = ref([
   'java',
   'react',
-  'vuejs',
+  'vue.js',
   'aws',
-  'nodejs',
+  'node.js',
   'spring',
   'docker',
   'npm',
-  'postgresql',
+  'postgres',
   'firebase',
   'influx',
   'redis'
@@ -91,7 +91,7 @@ const passions = ref([{
   text: 'Reading (find me on Goodreads)'
 }, {
   icon: 'fa-solid fa-person-swimming',
-  text: 'Swimming, running, trekking'
+  text: 'Swimming, running, trekking, working out'
 }, {
   icon: 'fa-solid fa-futbol',
   text: 'Watching sports'
@@ -101,15 +101,34 @@ const passions = ref([{
 }, {
   icon: 'fa-solid fa-arrow-trend-up',
   text: 'Finance'
-}])
+}
+])
 
 const experiences = ref([{
   title: 'Freelance',
   since: '2022',
-  description: 'I have started helping companies speed up the development of their projects'
+  description: 'I have started helping companies speed up the development of their projects',
+  projects: [
+    'Front-end web development (Vue.js) on a B2B / B2C italian food delivery project.'
+  ]
 }, {
   title: 'Software Architect @ AEC Soluzioni srl',
-  since: 'February, 2015'
+  since: 'February, 2015',
+  projects: [
+    `2022 - Design and development of JPiano® Edge, an automatically deployed environment (Docker + node.js)
+    for starting and managing uncoupled containers for field communication`,
+    '2022 - Design and development of JPiano® Logistics, a JPiano® Web version for companies that only move goods without producing it',
+    '2021 - Design and development of JPiano® Field Edge, a lightweight version of JPiano® for communicating with plants and storing data on Cloud',
+    '2021 - Design and development of JPiano® Cloud, a cloud set of components for letting small companies use JPiano® in a shared multi-tenant environment',
+    '2020 - Joined the JPiano® Server development team',
+    '2019 - Design and development from scratch of JPiano® Mobile (React-Native) for logistics, BI and notifications',
+    '2018 - Migrating the JPiano® Web application from SpringMVC + JSP + jquery-mobile to a Spring Boot served Single Page Application',
+    `2017 - Design and development from scratch of JPiano® Native Android Wear application for receiving notifications from 
+    on-premise JPiano® installations without the usage of public endpoints for registration`,
+    '2017 - Improved JPiano® client Java Swing application for handling multiple open functions concurrently and converted it from being single-threaded to multi-threaded',
+    '2017 - Joined the JPiano® Client and Framework development teams',
+    '2015 ~ 2016 - Software development of a scheduler for tasks, orders, projects and WBS for companies using JPiano®'
+  ]
 }])
 </script>
 <template>
@@ -131,6 +150,10 @@ const experiences = ref([{
           <div class="row justify-content-around mx-0 gy-0 mt-0 px-0">
             <img v-for="(s, i) in skills" :src="getImgUrl(s)" class="logo-tech col-3 my-2 col-sm-auto no-print" :key="s + i" />
             <span v-for="(s, i) in skills" :key="s + i" class="col-3 col-sm-auto my-0 print-only">{{s}}</span>
+            <!-- <span v-for="(s, i) in skills" :key="s + i" class="col-3 col-sm-auto my-0 fs-9 lh-1">
+              <img :src="getImgUrl(s)" class="logo-tech col-3 my-2 col-sm-auto" /><br/>
+              {{s}}
+            </span> -->
           </div>
         </CVS>
         <CVS icon="fa-solid fa-building-columns" title="University">
@@ -153,53 +176,29 @@ const experiences = ref([{
         </div>
         <Divider class="d-none d-sm-inline"/>
         <p class="text-justify text-monospace">
-          Long time passionate to logic and models abstraction, to the extraction of Mathematics
-          from the real world to solve the most trivial daily problems, I have found in Computer
-          Science the realization of my expressiveness and insight. Passion for tech projected me
-          to the most important choices for my studies and work career. Willful and pushing, I
-          never give up to the resolution of any kind of problem or the full achievement of my
-          goals, leaving binaries and classic patterns to find the most effective solutions.</p>
+          Software engineer with a master’s degree at Politecnico di Torino in Software Engineering, I started working in 2015
+          at the age of 22 right after graduating and obtaining a Bachelor’s degree in Computer Science Engineering.
+          The company I currently work for provides a software JPiano® for managing the industrial process and production.
+          I have been able to develop technical skills in a wide variety of technologies, spacing from backend to frontend, databases, data analysis,
+          and all that is needed to provide a service to a customer, including technologies related to operating it.
+          What I expect to find in my next job is more challenges: with a baggage like this, I want to exploit my experience
+          and keep feeding my <HW>curiosity</HW>:<br/> I expect to be able to get farther and farther from an operational position and become
+          a pure designer and decision maker, analyzing the customer and the project's functional and business needs,
+          drawing a route and guiding the team toward the goal.</p>
         <Divider white />
-        <!-- <div class="pt-1"></div> -->
-        <h5><HW uppercase primary bold>technical Skills and knowledge</HW></h5>
+        <h5><HW uppercase primary bold>technical skills and knowledge</HW></h5>
         <Divider />
-        <p class="text-justify text-monospace">
-          In my everyday job in the company I have almost exclusively worked in, I have spent most of the time developing
-          and growing a complex software platform spaning many services on several entities, first on each
-          customer's on premise installation, then on standard <HW>cloud</HW> implementations.<br/>
-          The job of each component might be completely different from one another, so choosing the best strategies and
-          technologies for developing, communicating and deploying was essential.<br/>
-          This way I have been able to learn very vary technologies, on each part of a running IT business, and under my guidance
-          old tech and approaches were replaced with new modern and fresh <HW>microservices-oriented</HW> ways of thinking.<br/>
-          <HW>Separation of concerns</HW> is my thing, and I'd rather add lines of code and complexity than hardcode,
-          having in mind that this way of coding eventually decreases the lines of code and the overall complexity.
-          I always look for configurability, because it allows <HW>reusability</HW> and eventual cost-saving,
-          but I am not a blind fan: sometimes, quick and simple is better.<br/>
-          Given the time I have worked in that company, its nature of being a startup, and the centrality of my position,
-          saying that I am a <HW>full-stack developer</HW> is indeed the truth: acquiring the customer's needs,
-          developing the backend business logic, designing the database model and optimizing queries, developing core UI framework
-          and implementations on both Java Swing fat-client and browser, designing and developing custom mobile apps.
-          But also I could increase my dev-ops skills, deploying custom services, docker instances, kubernetes.<br/>
-          <br/>
-          What I expect to find in my next job is more challenges: with a baggage like this, I want to exploit my experience,
-          and satisfy my voracious <HW>curiosity</HW>.<br/>
-          With a job background like this, I expect to get farther and farther from an operational position and become
-          a pure designer and decision maker, being able to analyze the customer and the project's functional and business needs,
-          draw a route and guide the team toward the goal.
-        </p>
-        <Divider white />
-        <!-- <div class="pt-1"></div> -->
-        <Divider />
-        <p v-for="({ title, description, since }, i) in experiences" :key="title + i">
+        <p v-for="({ title, description, since, projects }, i) in experiences" :key="title + i" class="mb-0">
         <b>{{ title }}</b>
         <template v-if="since"> (since {{ since }})</template>
         <template v-if="description">: {{ description }}</template>
+        <ul v-if="projects && projects.length">
+          <li v-for="(project, i) in projects" :key="project + i" class="fs-8">{{ project }}</li>
+        </ul>
         </p>
         <div class="pt-1"></div>
-        <!-- <div class="pt-4"></div> -->
-        <!-- <div class="pt-4"></div> -->
       </div>
-      <div class="row w-100 m-0 h-auto bg-primary text-white px-4 pb-2 pt-2 fs-8 align-items-end">
+      <div class="row w-100 m-0 h-auto bg-primary text-white px-4 pb-2 pt-2 fs-9 align-items-end">
           This CV was made using vue.js and bootstrap. Was it necessary? No, but more fun. Read it at https://balsick.github.io/cv<br/>
           In compliance with the Italian legislative Decree no. 196 dated 30/06/2003, I hereby authorize you to use and process my personal details contained in this document.
       </div>
