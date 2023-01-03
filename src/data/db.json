@@ -1,0 +1,92 @@
+{
+  "name": "Enrico",
+  "lastName": "Balsamo",
+  "subtitle": "Software is my thing",
+  "personalInfo": [{
+    "icon": "fa-cake-candles",
+    "text": "December 03, 1992"
+  }, {
+    "icon": "fa-at",
+    "text": "balsick@gmail.com"
+  }, {
+    "icon": "fa-location-dot",
+    "text": "Torino (TO) - Italy"
+  }, {
+    "icon": "fa-mobile",
+    "text": "+39 340 14 66 912"
+  }, {
+    "icon": "fa-brands fa-github",
+    "text": "balsick"
+  }, {
+    "icon": "fa-brands fa-stack-overflow",
+    "text": "user:2331491"
+  }],
+  "languages": {
+    "Italian": "Native speaker",
+    "English": "Fluent"
+  },
+  "passions": [{
+    "icon": "fa-book-open",
+    "text": "Reading (find me on Goodreads)"
+  }, {
+    "icon": "fa-person-swimming",
+    "text": "Swimming, running, trekking, working out"
+  }, {
+    "icon": "fa-futbol",
+    "text": "Watching sports"
+  }, {
+    "icon": "fa-tv",
+    "text": "Movies and TV shows"
+  }, {
+    "icon": "fa-arrow-trend-up",
+    "text": "Finance"
+  }
+  ],
+  "universities": [{
+    "year": 2018,
+    "bachelor": "Master's Degree in Computer Engineering"
+  }, {
+    "year": 2014,
+    "bachelor": "Bachelor's Degree in Computer Engineering"
+  }],
+  "experiences": [{
+    "title": "Freelance",
+    "since": "2022",
+    "description": "I have started helping companies speed up the development of their projects",
+    "projects": [
+      "Front-end web development (*Vue.js*) on a B2B / B2C italian food delivery project."
+    ]
+  }, {
+    "title": "Software Architect @ AEC Soluzioni srl",
+    "since": "February, 2015",
+    "projects": [
+      "2022 - Design and development of JPiano® Edge, an automatically deployed environment (*Docker* + *node.js*) for starting and managing uncoupled containers for field communication",
+      "2022 - Design and development of JPiano® Logistics, a JPiano® Web version for companies that only move goods without producing it",
+      "2021 - Design and development of JPiano® Field Edge, a lightweight version of JPiano® for communicating with plants and storing data on Cloud",
+      "2021 - Design and development of JPiano® Cloud, a cloud set of components for letting small companies use JPiano® in a shared multi-tenant environment",
+      "2020 - Joined the JPiano® Server development team",
+      "2019 - Design and development from scratch of JPiano® Mobile (*React-Native*) for logistics, BI and notifications",
+      "2018 - Migrating the JPiano® Web application from SpringMVC + JSP + jquery-mobile to a *Spring Boot* served Single Page Application",
+      "2017 - Design and development from scratch of JPiano® *Native Android Wear* application for receiving notifications from on-premise JPiano® installations without the usage of public endpoints for registration",
+      "2017 - Improved JPiano® client *Java Swing* application for handling multiple open functions concurrently and converted it from being single-threaded to multi-threaded",
+      "2017 - Joined the JPiano® Client and Framework development teams",
+      "2015 ~ 2016 - Software development of a scheduler for tasks, orders, projects and WBS for companies using JPiano®"
+    ]
+  }],
+  "skills": [
+    "java",
+    "react",
+    "vue.js",
+    "aws",
+    "node.js",
+    "spring",
+    "docker",
+    "npm",
+    "postgres",
+    "firebase",
+    "influx",
+    "redis"
+  ],
+  "summary": ["Software engineer with a master’s degree at Politecnico di Torino in Software Engineering, I started working in 2015 at the age of 22 right after obtaining a Bachelor’s degree in Computer Science Engineering. The company I currently work for provides a software (JPiano®) for managing industrial processes. I have developed technical skills in a wide variety of technologies, spacing from backend to frontend, databases, data analysis, and all that is needed to provide a service to a customer, including technologies related to operating it. What I expect to find in my next job is more challenges: with a baggage like this, I want to exploit my experience and keep feeding my *curiosity*:", "I expect to be able to get farther and farther from an operational position and become a pure designer and decision maker, analyzing the customer and the project's functional and business needs, drawing a route and guiding the team toward the goal."],
+  "footer": "This CV was made using vue.js and bootstrap. Was it necessary? No, but more fun. Read it at https://balsick.github.io/cv"
+}
